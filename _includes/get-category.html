@@ -1,0 +1,13 @@
+{% assign post = page %}
+{% if post.category.size > 0 %}
+    {% capture category_content %}{% if post.category.size > 1 %}, {% endif %}{% endcapture %}
+    {% for post_tag in post.category %}
+      {% assign category = site.data.categories[post_tag] %}
+      {% if category %}
+          {% capture category_content_temp %}{{ category_content }}<a href="/{{ post_tag }}/">{{ category.name }}</a>{% if forloop.last == false %}, {% endif %}{% endcapture %}
+          {% assign category_content = category_content_temp %}
+      {% endif %}
+    {% endfor %}
+{% else %}
+    {% assign category_content = '' %}
+{% endif %}
