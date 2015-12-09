@@ -23,7 +23,7 @@ permalink: /contact/
       </li>
       <li>
         <strong><small>Treasurer</small></strong><br />
-        <a href="#" onclick="window.location='mailto:kdimenza@gmail.com'">Tina Di Menza</a>
+        <a href="#" onclick="window.location='mailto:tinalespta@gmail.com'">Tina Di Menza</a>
       </li>
       <li>
         <strong><small>Recording Secretary</small></strong><br />
