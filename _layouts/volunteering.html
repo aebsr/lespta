@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="home" id="home">
+  <h1 class="pageTitle">{{ page.title }}</h1>
+  <ul class="posts noList">
+      {% for event in site.data.volunteer %}
+        <li>
+          {% if event.date.size > 1 %}
+            <span class="date">{{ event.date[0] | date: '%B %d' }} - {{ event.date.last | date: '%d, %Y' }}</span>
+          {% else %}
+            <span class="date">{{ event.date | date: '%B %d, %Y' }}</span>
+          {% endif %}
+          <h3><a class="post-link" href="{{ event.url }}">{{ event.title }}</a></h3>
+          {% if event.description %}<p class="description">{{ event.description | strip_html | strip_newlines }}</p>{% endif %}
+        </li>
+      {% endfor %}
+  </ul>
+</div>
